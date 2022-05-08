@@ -1,0 +1,52 @@
+/* These styles will be applied to devices with a width of at least 1025px */
+@media screen and (min-width: 1025px) {
+  .cards {
+    display: flex;
+    justify-content: center;
+    width: 97%;
+  }
+
+  .card {
+    width: auto;
+    margin: 0;
+  }
+
+  /* Second card */
+  .card--multisite {
+    margin: 0 1rem;
+  }
+}
+
+/* These styles will be applied to devices with a width of at least 1270px */
+@media screen and (min-width: 1270px) {
+  .title {
+    font-size: 5rem;
+  }
+
+  /* Toggle switch container */
+  .toggle {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+  }
+
+  /* Annually and monthly texts */
+  .toggle__period {
+    font-size: 1.6rem;
+  }
+
+  .cards {
+    width: 100%;
+  }
+
+  /* Second card */
+  .card--multisite {
+    margin: 0 2rem;
+  }
+}
+
+/* If the device supports hover, we change the button background color */
+@media (hover: hover) {
+  .card__btn:hover {
+    background: var(--purple3);
+  }
+}

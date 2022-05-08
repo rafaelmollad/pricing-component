@@ -1,0 +1,235 @@
+/***************
+ * BASE STYLES * 
+ ***************/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --purple1: #f5f1ff;
+  --purple2: #6702fa;
+  --purple3: #5902d8;
+  --blue: #283fa7;
+  --yellow: #f9e16c;
+  --green: #00cc39;
+  --gray1: #ebebeb;
+  --gray2: #c4c4c4;
+  --gray3: #767679;
+  --black: #262626;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: var(--purple1);
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Title */
+.title {
+  font-size: 4rem;
+  color: var(--purple2);
+  padding-top: 7rem;
+}
+
+/*****************
+ * TOGGLE SWITCH * 
+ *****************/
+
+/* Toggle switch */
+.toggle {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+/* Monthly and annually text next to toggle switch */
+.toggle__period {
+  font-size: 1.5rem;
+  color: var(--black);
+  letter-spacing: 0.5px;
+}
+
+/* Checkbox */
+.toggle__checkbox {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+/* Switch background */
+.toggle__background {
+  width: 4.9rem;
+  height: 2.6rem;
+  background: var(--gray2);
+  border-radius: 100px;
+  position: relative;
+  cursor: pointer;
+  margin: 0 1.2rem;
+}
+
+/* Circle within toggle switch */
+.toggle__background::after {
+  content: "";
+  width: 2.2rem;
+  height: 2.2rem;
+  background: #fff;
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+
+/* Change switch container background when toggle switch is clicked */
+.toggle__checkbox:checked + .toggle__background {
+  background: var(--purple2);
+}
+
+/* Move circle when toggle switch is clicked */
+.toggle__checkbox:checked + .toggle__background:after {
+  left: calc(100% - 26px);
+}
+
+/*********
+ * CARDS * 
+ *********/
+
+.cards {
+  padding-bottom: 7rem;
+}
+
+/* Styles for every card */
+.card {
+  width: 90%;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 5px var(--gray1);
+}
+
+/* Second card */
+.card--multisite {
+  position: relative;
+  margin: 2rem auto;
+}
+
+.card__badge {
+  background: var(--yellow);
+  color: var(--blue);
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.5rem 1rem 0.5rem 1.6rem;
+  border-bottom-left-radius: 40px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2px;
+}
+
+.card__plan,
+.card__price,
+.card__period {
+  color: var(--purple2);
+}
+
+.card__plan {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.card__price {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.card__period {
+  position: relative;
+  left: -5px;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+.card__description,
+.card__feature {
+  color: var(--gray3);
+}
+
+.card__description {
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  line-height: 2.2rem;
+}
+
+/* Dividing line below description */
+.card__description::after {
+  content: "";
+  height: 1.5px;
+  width: 100%;
+  display: block;
+  background: var(--gray1);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card__feature {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 1.4rem;
+}
+
+/* Checkmark icons */
+.feature__icon {
+  width: 1.8rem;
+  margin-right: 0.65rem;
+  color: var(--green);
+}
+
+/* Feature text next to checkmark */
+.feature__text {
+  letter-spacing: 0.5px;
+}
+
+.card__btn {
+  width: 100%;
+  background: var(--purple2);
+  color: var(--white);
+  margin-top: 2rem;
+  padding: 1.4rem 0;
+  border: none;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}

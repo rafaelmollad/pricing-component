@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing component</title>
+    <!-- Load Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load styles.css -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Load media-queries.css -->
+    <link rel="stylesheet" href="./css/media-queries.css" />
+    <!-- Load feather icons CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+  </head>
+  <body>
+    <!-- Title -->
+    <h1 class="title">Our Plans</h1>
+
+    <!-- Toggle switch -->
+    <div class="toggle">
+      <span class="toggle__period toggle__period--annually">Annually</span
+      ><input type="checkbox" id="switch" class="toggle__checkbox" /><label
+        class="toggle__background"
+        for="switch"
+      ></label
+      ><span class="toggle__period toggle__period--monthly">Monthly</span>
+    </div>
+
+    <!-- Cards container -->
+    <div class="cards">
+      <!-- Basic -->
+      <div class="card card--basic">
+        <h3 class="card__plan">Basic</h3>
+        <h2 class="card__price">
+          $3.99 <span class="card__period">/month</span>
+        </h2>
+
+        <p class="card__description">
+          An economical, 10 GB plan with free matching domain and free email.
+        </p>
+        <ul>
+          <li class="card__feature feature">
+            <i data-feather="check" class="feature__icon"></i
+            ><span class="feature__text">1 Website</span>
+          </li>
+          <li class="card__feature feature">
+            <i data-feather="check" class="feature__icon"></i
+            ><span class="feature__text">10 GB Web Space</span>
+          </li>
+          <li class="card__feature feature">
+            <i data-feather="check" class="feature__icon"></i
+            ><span class="feature__text">~ 10,000 Visits Monthly</span>
+          </li>
+          <li class="card__feature feature">
+            <i data-feather="check" class="feature__icon"></i
+            ><span class="feature__text">Unmetered Traffic</span>
+          </li>
+        </ul>
+        <button class="card__btn">Get Started</button>
+      </div>
+
+      <!-- Multisite-->
+      <div class="card card--multisite">
+        <span class="card__badge">popular</span>
+        <h3 class="card__plan">Multisite</h3>
+        <h2 class="card__price">
+          $6.99 <span class="card__period">/month</span>
+        </h2>
+
+        <p class="card__description">
+          Unlimited sites with 20 GB storage. Free matching domain and free
+          email.
+        </p>
+        <ul>
+          <li class="card__feature feature">
+            <i data-feather="check" class="feature__icon"></i
+            ><span class="feature__text">Unlimited Websites</span>
+          </li>
+          <li class="card__feature feature">
+            <i data-feather="check" class="feature__icon"></i
+            ><span class="feature__text">20 GB Web Space</span>
+          </li>
+          <li class="card__feature feature">
+            <i data-feather="check" class="feature__icon"></i
+            ><span class="feature__text">~ 100,000 Visits Monthly</span>
+          </li>
+          <li class="card__feature feature">
+            <i data-feather="check" class="feature__icon"></i
+            ><span class="feature__text">Unmetered Traffic</span>
+          </li>
+        </ul>
+        <button class="card__btn">Get Started</button>
+      </div>
+
+      <!-- Business -->
+      <div class="card card--business">
+        <h3 class="card__plan">Business</h3>
+        <h2 class="card__price">
+          $9.99 <span class="card__period">/month</span>
+        </h2>
+        <p class="card__description">
+          Increased processing power with unlimited sites, storage and
+          databases.
+        </p>
+        <ul>
+          <li class="card__feature feature">
+            <i data-feather="check" class="feature__icon"></i
+            ><span class="feature__text">Unlimited Websites</span>
+          </li>
+
+          <li class="card__feature feature">
+            <i data-feather="check" class="feature__icon"></i
+            ><span class="feature__text">Unlimited Web Space</span>
+          </li>
+
+          <li class="card__feature feature">
+            <i data-feather="check" class="feature__icon"></i
+            ><span class="feature__text">~ 400,000 Visits Monthly</span>
+          </li>
+
+          <li class="card__feature feature">
+            <i data-feather="check" class="feature__icon"></i
+            ><span class="feature__text">Unmetered Traffic</span>
+          </li>
+        </ul>
+        <button class="card__btn">Get Started</button>
+      </div>
+    </div>
+
+    <!-- Script for feather icons -->
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>
