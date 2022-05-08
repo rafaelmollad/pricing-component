@@ -171,6 +171,14 @@ ul {
   margin-bottom: 0.5rem;
 }
 
+.card__price::after {
+  content: "/ month";
+  position: relative;
+  left: 5px;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
 .card__period {
   position: relative;
   left: -5px;
